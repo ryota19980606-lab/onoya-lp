@@ -57,36 +57,32 @@
             <a class="button primary" href="products.html">おすすめ商品を見る</a>
             <a class="button ghost" href="gift.html">贈り物を選ぶ</a>
           </div>
-
-          <div class="trust-badges" aria-label="大野屋のこだわり">
-            <article>
-              <span class="badge-icon" aria-hidden="true">直</span>
-              <h2>精肉店直営</h2>
-              <p>肉のプロが厳選</p>
-            </article>
-            <article>
-              <span class="badge-icon" aria-hidden="true">冷</span>
-              <h2>プロトン冷凍</h2>
-              <p>旨みを閉じ込める</p>
-            </article>
-            <article>
-              <span class="badge-icon" aria-hidden="true">技</span>
-              <h2>こだわり製法</h2>
-              <p>手間を惜しまない</p>
-            </article>
-          </div>
         </div>
 
-        <div class="hero-visual" role="img" aria-label="鉄板で焼かれた肉料理のイメージ">
-          <span class="steam steam-one"></span>
-          <span class="steam steam-two"></span>
-          <span class="steam steam-three"></span>
-          <span class="meat-plate">
-            <span class="meat-gloss"></span>
-          </span>
-          <span class="vegetable vegetable-green"></span>
-          <span class="vegetable vegetable-orange"></span>
-          <span class="vegetable vegetable-gold"></span>
+        <div class="hero-visual photo-visual">
+          <img
+            src="assets/product-hamburg.png"
+            alt="湯気の立つ牛100%ハンバーグ"
+            fetchpriority="high"
+          >
+        </div>
+
+        <div class="trust-badges" aria-label="大野屋のこだわり">
+          <article>
+            <span class="badge-icon" aria-hidden="true">直</span>
+            <h2>精肉店直営</h2>
+            <p>肉のプロが厳選</p>
+          </article>
+          <article>
+            <span class="badge-icon" aria-hidden="true">冷</span>
+            <h2>プロトン冷凍</h2>
+            <p>旨みを閉じ込める</p>
+          </article>
+          <article>
+            <span class="badge-icon" aria-hidden="true">技</span>
+            <h2>こだわり製法</h2>
+            <p>手間を惜しまない</p>
+          </article>
         </div>
       </section>
 
@@ -98,7 +94,8 @@
 
         <div class="product-grid">
           <article class="product-card">
-            <div class="product-visual product-hamburg">
+            <div class="product-visual product-hamburg photo-visual">
+              <img src="assets/product-hamburg.png" alt="肉屋の牛100%ハンバーグ" loading="lazy">
               <span class="rank">人気<br>No.1</span>
             </div>
             <h3>肉屋の牛100%ハンバーグ</h3>
@@ -108,7 +105,8 @@
           </article>
 
           <article class="product-card">
-            <div class="product-visual product-stew">
+            <div class="product-visual product-stew photo-visual">
+              <img src="assets/product-beef-suji.png" alt="肉屋の牛すじ煮込み" loading="lazy">
               <span class="rank">人気<br>No.2</span>
             </div>
             <h3>肉屋の牛すじ煮込み</h3>
@@ -118,7 +116,8 @@
           </article>
 
           <article class="product-card">
-            <div class="product-visual product-bowl">
+            <div class="product-visual product-bowl photo-visual">
+              <img src="assets/product-butadon.png" alt="お箸で肉丼本舗 炭火豚丼" loading="lazy">
               <span class="rank">人気<br>No.3</span>
             </div>
             <h3>お箸で肉丼本舗 炭火豚丼</h3>
@@ -128,7 +127,9 @@
           </article>
 
           <article class="product-card">
-            <div class="product-visual product-kalbi"></div>
+            <div class="product-visual product-kalbi photo-visual">
+              <img src="assets/product-kalbi.png" alt="お箸で肉丼本舗 牛カルビ丼" loading="lazy">
+            </div>
             <h3>お箸で肉丼本舗 牛カルビ丼</h3>
             <p>甘辛ダレで仕上げた牛カルビを、ご飯にのせるだけ。</p>
             <p class="price">780<span>円(税込)</span></p>
@@ -146,11 +147,12 @@
           </p>
           <a class="button primary" href="gift.html">ギフトセット一覧へ</a>
         </div>
-        <div class="gift-box" role="img" aria-label="黒い化粧箱に入ったギフト商品のイメージ">
-          <span class="box-lid">大野屋</span>
-          <span class="gift-pack pack-one">牛すじ</span>
-          <span class="gift-pack pack-two">豚丼</span>
-          <span class="gift-pack pack-three">ハンバーグ</span>
+        <div class="gift-box gift-photo">
+          <img
+            src="assets/gift-box-card.png"
+            alt="黒い化粧箱とメッセージカードのギフトセット"
+            loading="lazy"
+          >
         </div>
       </section>
 
@@ -195,7 +197,15 @@
           </p>
           <a class="button ghost" href="about.html">大野屋について</a>
         </div>
-        <div class="store-visual" role="img" aria-label="老舗店舗と自然をイメージした背景"></div>
+        <figure class="store-visual">
+          <img
+            src="assets/founder-onoya.jpg"
+            width="900"
+            height="1176"
+            loading="lazy"
+            alt="大野屋の屋号が掲げられた当時の店舗前の写真"
+          >
+        </figure>
       </section>
     </main>
 

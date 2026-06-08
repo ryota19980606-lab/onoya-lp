@@ -231,7 +231,7 @@ svg {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(22rem, 1.1fr);
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: clamp(1.6rem, 3vw, 2.4rem) clamp(2rem, 5vw, 5rem);
   align-items: center;
   min-height: 620px;
   padding: clamp(3rem, 7vw, 5.8rem) max(1.5rem, calc((100vw - 1180px) / 2));
@@ -348,11 +348,14 @@ svg {
 }
 
 .trust-badges {
+  position: relative;
+  z-index: 1;
   display: grid;
+  grid-column: 1;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
   max-width: 34rem;
-  margin-top: 2.4rem;
+  margin-top: 0;
 }
 
 .trust-badges article {
@@ -1070,44 +1073,48 @@ svg {
 
 .store-visual {
   position: relative;
-  min-height: 20rem;
+  min-height: clamp(20rem, 34vw, 28rem);
+  margin: 0;
   overflow: hidden;
-  background:
-    linear-gradient(180deg, rgba(255, 248, 234, 0.08), transparent 42%),
-    radial-gradient(circle at 18% 32%, #75834b, transparent 18%),
-    radial-gradient(circle at 28% 64%, #2f5b2f, transparent 25%),
-    linear-gradient(155deg, #0f1d12 0 35%, #3d2418 36% 62%, #0b0907 63%);
-  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.42), inset 0 0 0 1px rgba(216, 191, 122, 0.14);
+  isolation: isolate;
+  background: #090705;
+  border: 1px solid rgba(216, 191, 122, 0.3);
+  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.42), inset 0 0 0 1px rgba(255, 248, 234, 0.08);
+}
+
+.store-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 18%;
+  filter: sepia(0.2) contrast(1.08) brightness(0.98);
+  transform: scale(1.015);
 }
 
 .store-visual::before {
   position: absolute;
-  right: 6%;
-  bottom: 12%;
-  width: 62%;
-  height: 44%;
   content: "";
+  inset: 0;
+  z-index: 1;
   background:
-    linear-gradient(90deg, transparent 0 8%, rgba(255, 248, 234, 0.18) 8% 10%, transparent 10% 18%),
-    linear-gradient(180deg, #4e2b1b 0 18%, #22130d 18% 100%);
-  background-size: 4.5rem 100%, auto;
-  box-shadow: inset 0 0 0 1px rgba(216, 191, 122, 0.16);
+    linear-gradient(90deg, rgba(5, 4, 3, 0.42), transparent 32%, rgba(5, 4, 3, 0.22)),
+    radial-gradient(circle at 19% 28%, rgba(216, 191, 122, 0.18), transparent 13rem),
+    linear-gradient(180deg, rgba(5, 4, 3, 0.05), transparent 42%, rgba(5, 4, 3, 0.42));
+  mix-blend-mode: multiply;
+  pointer-events: none;
 }
 
 .store-visual::after {
   position: absolute;
-  right: 8%;
-  bottom: 51%;
-  width: 66%;
-  height: 28%;
-  content: "大野屋";
-  display: grid;
-  place-items: center;
-  color: var(--pale-gold);
-  background: linear-gradient(135deg, #24130c, #0d0806);
-  clip-path: polygon(0 32%, 100% 0, 92% 100%, 7% 83%);
-  font-family: var(--serif);
-  font-size: 1.2rem;
+  inset: clamp(0.7rem, 1.6vw, 1rem);
+  z-index: 2;
+  content: "";
+  border: 1px solid rgba(216, 191, 122, 0.34);
+  box-shadow: inset 0 0 0 1px rgba(5, 4, 3, 0.28);
+  pointer-events: none;
 }
 
 .site-footer {
@@ -1582,11 +1589,13 @@ svg {
   }
 
   .hero {
-    padding: 2.8rem 1rem 3rem;
+    gap: 1.25rem;
+    padding: 1.8rem 1rem 2.4rem;
   }
 
   .hero h1 {
-    font-size: clamp(2.35rem, 14vw, 3.35rem);
+    font-size: clamp(2.25rem, 12vw, 3rem);
+    line-height: 1.32;
   }
 
   .page-hero h1 {
@@ -1603,12 +1612,21 @@ svg {
 
   .hero-lead {
     max-width: 21rem;
+    margin-top: 0.8rem;
     font-size: 1.02rem;
+    line-height: 1.62;
   }
 
   .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin-top: 1.25rem;
+  }
+
+  .hero-actions .button {
+    padding-inline: 0.75rem;
+    font-size: 0.88rem;
   }
 
   .trust-badges {
