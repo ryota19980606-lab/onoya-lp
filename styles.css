@@ -95,19 +95,57 @@ svg {
 }
 
 .brand-mark {
+  position: relative;
+  isolation: isolate;
   display: grid;
   width: 3.4rem;
   aspect-ratio: 1;
   place-items: center;
-  color: var(--black);
+  color: var(--pale-gold);
   background:
-    radial-gradient(circle, var(--pale-gold), var(--gold));
-  border: 1px solid rgba(255, 248, 234, 0.48);
+    radial-gradient(circle at 34% 26%, rgba(255, 248, 234, 0.18), transparent 0.6rem),
+    radial-gradient(circle at 50% 58%, #2b2116 0 44%, #0b0805 70%),
+    conic-gradient(from 20deg, #6e5422, var(--pale-gold), #8b6827, var(--gold), #6e5422);
+  border: 1px solid rgba(216, 191, 122, 0.86);
   border-radius: 50%;
-  box-shadow: 0 0 0 0.22rem rgba(184, 145, 59, 0.16);
+  box-shadow:
+    inset 0 0 0 0.22rem rgba(5, 4, 3, 0.82),
+    inset 0 0 0 0.34rem rgba(216, 191, 122, 0.48),
+    0 0 0 0.16rem rgba(184, 145, 59, 0.2),
+    0 0.45rem 1rem rgba(0, 0, 0, 0.42);
   font-family: var(--serif);
-  font-size: 1.45rem;
+  font-size: 1.58rem;
   font-weight: 700;
+  line-height: 1;
+  text-shadow:
+    0 1px 0 rgba(255, 248, 234, 0.28),
+    0 0.18rem 0.45rem rgba(0, 0, 0, 0.72);
+}
+
+.brand-mark::before,
+.brand-mark::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+}
+
+.brand-mark::before {
+  inset: 0.5rem;
+  z-index: -1;
+  border: 1px solid rgba(216, 191, 122, 0.7);
+  border-radius: 50%;
+  background:
+    linear-gradient(135deg, transparent 43%, rgba(216, 191, 122, 0.28) 44% 47%, transparent 48%),
+    linear-gradient(45deg, transparent 43%, rgba(216, 191, 122, 0.2) 44% 47%, transparent 48%);
+}
+
+.brand-mark::after {
+  right: 0.58rem;
+  bottom: 0.55rem;
+  left: 0.58rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(216, 191, 122, 0.9), transparent);
+  box-shadow: 0 -1.75rem 0 rgba(216, 191, 122, 0.16);
 }
 
 .brand-copy {
