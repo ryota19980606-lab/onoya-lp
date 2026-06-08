@@ -880,6 +880,39 @@ svg {
   color: rgba(255, 248, 234, 0.84);
 }
 
+.history {
+  padding: clamp(3.2rem, 7vw, 5.6rem) max(1.5rem, calc((100vw - 1180px) / 2));
+  color: var(--cream-text);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(122, 33, 24, 0.22), transparent 18rem),
+    radial-gradient(circle at 88% 74%, rgba(184, 145, 59, 0.14), transparent 18rem),
+    linear-gradient(135deg, #070504, var(--black) 56%, #170c08);
+}
+
+.history-inner {
+  width: min(980px, 100%);
+}
+
+.history h2 {
+  max-width: 54rem;
+  margin: 0;
+  color: var(--cream-text);
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4.4vw, 3.8rem);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.history p:not(.eyebrow) {
+  max-width: 58rem;
+  margin: 1.35rem 0 0;
+  color: rgba(255, 248, 234, 0.86);
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+  line-height: 2.15;
+  overflow-wrap: anywhere;
+}
+
 .store-visual {
   position: relative;
   min-height: 20rem;
@@ -981,6 +1014,14 @@ svg {
   font-weight: 500;
   line-height: 1.35;
   overflow-wrap: anywhere;
+}
+
+.page-title-line {
+  display: block;
+}
+
+.page-title-line + .page-title-line {
+  margin-top: 0.12em;
 }
 
 .page-lead {
