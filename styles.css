@@ -36,6 +36,20 @@ body {
   font-family: var(--sans);
   line-height: 1.8;
   letter-spacing: 0;
+  line-break: strict;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(h1, h2, h3, p, a, button, summary, label, th, td, .announcement) {
+  line-break: strict;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+:where(h1, h2, h3, .page-lead, .hero-lead, .announcement) {
+  text-wrap: pretty;
 }
 
 body::before {
@@ -116,7 +130,7 @@ svg {
   font-family: var(--serif);
   font-size: 1.58rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.12;
   text-shadow:
     0 1px 0 rgba(255, 248, 234, 0.28),
     0 0.18rem 0.45rem rgba(0, 0, 0, 0.72);
@@ -162,7 +176,7 @@ svg {
 .brand-name {
   font-size: clamp(1.45rem, 2.4vw, 2rem);
   letter-spacing: 0.04em;
-  line-height: 1.1;
+  line-height: 1.22;
 }
 
 .main-nav,
@@ -224,7 +238,7 @@ svg {
   background: #b90013;
   border-radius: 50%;
   font-size: 0.64rem;
-  line-height: 1;
+  line-height: 1.12;
 }
 
 .hero {
@@ -278,7 +292,7 @@ svg {
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 7vw, 5.8rem);
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
 }
 
 .title-line {
@@ -311,7 +325,7 @@ svg {
   border: 1px solid currentColor;
   font-family: var(--serif);
   font-size: 0.95rem;
-  line-height: 1.2;
+  line-height: 1.42;
   text-align: center;
   transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease;
 }
@@ -396,7 +410,7 @@ svg {
   color: var(--gold);
   font-family: var(--serif);
   font-size: 1.5rem;
-  line-height: 1;
+  line-height: 1.16;
 }
 
 .trust-badges h2 {
@@ -726,7 +740,7 @@ svg {
   border: 1px solid var(--gold);
   font-family: var(--serif);
   font-size: 0.82rem;
-  line-height: 1.2;
+  line-height: 1.34;
 }
 
 .product-card h3 {
@@ -750,7 +764,7 @@ svg {
   color: var(--meat-red);
   font-family: Georgia, var(--serif);
   font-size: 1.55rem;
-  line-height: 1;
+  line-height: 1.26;
   text-align: center;
 }
 
@@ -902,7 +916,7 @@ svg {
   color: var(--gold);
   font-family: var(--serif);
   font-size: 2.25rem;
-  line-height: 1;
+  line-height: 1.16;
 }
 
 .service-strip h2 {
@@ -1552,7 +1566,8 @@ svg {
     max-width: 100vw;
     padding-inline: 1rem;
     line-height: 1.65;
-    word-break: break-all;
+    overflow-wrap: break-word;
+    word-break: normal;
     text-align: left;
   }
 
@@ -1600,14 +1615,16 @@ svg {
 
   .page-hero h1 {
     font-size: clamp(1.85rem, 8.8vw, 2.35rem);
-    line-height: 1.5;
-    word-break: break-all;
+    line-height: 1.58;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .page-lead {
     max-width: 100%;
     font-size: 0.98rem;
-    word-break: break-all;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .hero-lead {
